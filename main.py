@@ -5,10 +5,10 @@ from shutil import copyfile
 
 # config
 # os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-MAX_EPOCH = 1
-STEP_PER_EPOCH = 3
+MAX_EPOCH = 100
+STEP_PER_EPOCH = 300
 TRAIN_PATH = 'data/membrane/train'
-TEST_PATH = 'data/membrane/test_2'
+TEST_PATH = 'data/membrane/test_3'
 
 if not os.path.isfile(TEST_PATH):
     os.mkdir(TEST_PATH)
