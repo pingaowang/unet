@@ -4,7 +4,7 @@ import os.path
 
 # config
 # os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-MAX_EPOCH = 10
+MAX_EPOCH = 100
 TRAIN_PATH = 'data/membrane/train'
 TEST_PATH = 'data/membrane/test_2'
 
