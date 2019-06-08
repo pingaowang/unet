@@ -12,7 +12,7 @@ TEST_PATH = 'data/membrane/test_2'
 
 if not os.path.isfile(TEST_PATH):
     os.mkdir(TEST_PATH)
-    for i in range(29):
+    for i in range(30):
         copyfile(os.path.join('data/membrane/test', str(i) + '.png'),
                  os.path.join(TEST_PATH, str(i) + '.png'))
 
