@@ -1,15 +1,20 @@
 from model import *
 from data import *
 import os.path
+from shutil import copyfile
 
 # config
 # os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-MAX_EPOCH = 100
+MAX_EPOCH = 1
+STEP_PER_EPOCH = 3
 TRAIN_PATH = 'data/membrane/train'
 TEST_PATH = 'data/membrane/test_2'
 
-if not os.path.isfile:
+if not os.path.isfile(TEST_PATH):
     os.mkdir(TEST_PATH)
+    for i in range(29):
+        copyfile(os.path.join('data/membrane/test', str(i) + '.png'),
+                 os.path.join(TEST_PATH, str(i) + '.png'))
 
 
 # Augmentation
@@ -28,7 +33,7 @@ model_checkpoint = ModelCheckpoint('unet_membrane.hdf5', monitor='loss', verbose
 
 # fit
 model.fit_generator(myGene,
-                    steps_per_epoch=300,
+                    steps_per_epoch=STEP_PER_EPOCH,
                     epochs=MAX_EPOCH,
                     callbacks=[model_checkpoint])
 
