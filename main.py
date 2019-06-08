@@ -1,11 +1,16 @@
 from model import *
 from data import *
+import os.path
 
 # config
 # os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 MAX_EPOCH = 10
 TRAIN_PATH = 'data/membrane/train'
-TEST_PATH = 'data/membrane/test'
+TEST_PATH = 'data/membrane/test_2'
+
+if not os.path.isfile:
+    os.mkdir(TEST_PATH)
+
 
 # Augmentation
 data_gen_args = dict(rotation_range=0.2,
