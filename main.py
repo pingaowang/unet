@@ -5,7 +5,7 @@ from data import *
 # os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 MAX_EPOCH = 10
 TRAIN_PATH = 'data/membrane/train'
-TEST_PATH = 'data/membrane/test_2'
+TEST_PATH = 'data/membrane/test'
 
 # Augmentation
 data_gen_args = dict(rotation_range=0.2,
